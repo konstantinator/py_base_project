@@ -1,5 +1,7 @@
 # Py_base_project
 
+Приложение по оценке сложности статьи с n+1 по заголовку и тексту
+
 ## Files and Folders
 
 - `app.py`: streamlit app file
