@@ -1,10 +1,14 @@
 # Py_base_project
 
-## Files
+## Files and Folders
 
 - `app.py`: streamlit app file
 - `requirements.txt`: package requirements files
 - `Dockerfile` for docker deployment
+- `notebook` data extractor and model learning
+- `data` source data
+- `models` tf-idf transform and catboost model
+
 
 ## Run Demo Locally 
 
