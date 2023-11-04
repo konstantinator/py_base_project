@@ -9,7 +9,9 @@ from pymorphy2 import MorphAnalyzer
 
 morph = MorphAnalyzer()
 patterns = r'[^a-zA-Zа-яА-Я0-9ёЁ]'
-
+reg = CatBoostRegressor()     
+reg.load_model('./models/model.cbm')
+tf_full = joblib.load('./models/vectorizer_full.pkl')
 
 def lemmatize(doc):
     doc = re.sub(patterns, ' ', doc)
@@ -26,9 +28,7 @@ def lemmatize(doc):
 
 def process():
     # Ввод текста
-    reg = CatBoostRegressor()     
-    reg.load_model('./models/model.cbm')
-    tf_full = joblib.load('./models/vectorizer_full.pkl')
+    
 
     st.title("Оценка сложности текстов на основе данных статей N+1")
     title = st.text_input("Заголовок")
